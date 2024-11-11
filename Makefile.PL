@@ -97,6 +97,9 @@ Tk::MMutil::TkExtMakefile(
     ($eumm_recent_enough ?
       (META_ADD => { resources => { repository => 'http://github.com/eserte/perl-tk' } }) : ()),
     'CCFLAGS' => "$Config::Config{ccflags} -Wno-incompatible-pointer-types -Wno-implicit-int",
+    'PERM_DIR' => '775',
+    'PERM_RW' => '664',
+    'PERM_RWX' => '775',
 
     @macro
    );
